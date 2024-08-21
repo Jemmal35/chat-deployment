@@ -16,11 +16,12 @@ from datetime import timedelta
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 import os
+from decouple import config
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&z!v=n9#!@0!ba+$=hwk#9yh5hbsbg6qac*bs3+6k4q&2_ok4g'
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,7 +32,7 @@ import dj_database_url
 
 
 DATABASES = {
-    'default': dj_database_url.parse("postgresql://mytestdb_ur3s_user:YqBnlZWsHlJ6gWdsvPvwbuOf1QV2uU3e@dpg-cr2tsvg8fa8c73c25640-a.oregon-postgres.render.com/mytestdb_ur3s")
+    'default': dj_database_url.parse(config("DATABASE_URL"))
 }
 # Application definition
 
