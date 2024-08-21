@@ -26,7 +26,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:8000','127.0.0.1','ajefchat.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1:8000','127.0.0.1','ajefchatapp.onrender.com']
 
 import dj_database_url
 
